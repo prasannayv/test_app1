@@ -1,0 +1,21 @@
+<div class="depot_form" >
+<%= form_tag(sessions_path, :method=>'post') do %>
+  <%#= form_tag user_path, :method =>'get'  do%>
+  <fieldset>
+    <legend>Please Log In</legend><br />
+    <div>
+      <label for="name" >Name:</label>
+      <%= text_field_tag :name, params[:name] %><br /><br />
+    </div>
+    <div>
+      <label for="password" >Password:</label>
+      <%= password_field_tag :password, params[:hashed_password] %><br /><br />
+    </div>
+    <div>
+      <%= submit_tag "Login" %><br /><br />
+      <%= link_to 'New User', new_user_path %>
+    </div>
+  </fieldset>
+<% end %>
+  
+</div>
